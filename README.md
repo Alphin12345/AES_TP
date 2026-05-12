@@ -12,8 +12,7 @@ Implementation of the Advanced Encryption Standard (AES) algorithm with core enc
 
 <p>
 This project demonstrates the implementation of the 
-<b>Advanced Encryption Standard (AES)</b>, a symmetric-key encryption algorithm 
-used worldwide for secure data communication.
+<b>Advanced Encryption Standard (AES)</b>, programmed through vivado,Xilinx using Verilog HDL.
 The project focuses on the major AES transformation modules and their inverse operations.
 </p>
 
@@ -56,22 +55,24 @@ Row 3: shift left by 3 bytes
 The <code>MixColumns</code> operation performs matrix multiplication in 
 Galois Field arithmetic to mix the bytes within each column.
   <img src="./docs/GF_MixCol_Single.png" width="300" />
-  For a single coloumn, the equations are as follows:
-  b0 = (02 · a0) ⊕ (03 · a1) ⊕ a2 ⊕ a3
-b1 = a0 ⊕ (02 · a1) ⊕ (03 · a2) ⊕ a3
-b2 = a0 ⊕ a1 ⊕ (02 · a2) ⊕ (03 · a3)
-b3 = (03 · a0) ⊕ a1 ⊕ a2 ⊕ (02 · a3)
+  <p>For a single coloumn, the equations are as follows:
+  <p>b0 = (02 · a0) ⊕ (03 · a1) ⊕ a2 ⊕ a3</p>
+<p>b1 = a0 ⊕ (02 · a1) ⊕ (03 · a2) ⊕ a3</p>
+<p>b2 = a0 ⊕ a1 ⊕ (02 · a2) ⊕ (03 · a3)</p>
+<p>b3 = (03 · a0) ⊕ a1 ⊕ a2 ⊕ (02 · a3)</p>
+<p>which is also the <b>GF Multiplier</b></p>
   For it to affect the entire Matrix values, we do it to all four coloumns.
-
-  <h3>GF multiplier</h3>
-  
-</p>
+  </p>
 
 <h3>5️ Key Expansion</h3>
 <p>
 The <code>Key Expansion</code> module generates multiple round keys from the original cipher key.
 These keys are used in different AES rounds during encryption and decryption.
 </p>
+<p>Leaf cells has been uploaded as <b>LC</b> in docs</p>
+
+<h2>Block Diagram</h2>
+
 
 <hr>
 
