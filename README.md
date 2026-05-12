@@ -108,7 +108,11 @@ Reverses the cyclic row shifts performed during the <code>ShiftRows</code> step.
 <p>
 Reverses the <code>MixColumns</code> transformation using inverse matrix multiplication.
 </p>
-
+<p>
+  Take one 4-byte column from the state matrix as a0, a1, a2, a3.
+Multiply this column with the inverse fixed matrix:
+   <img src="./docs/Block Diagram.png" width="800" />
+</p>
 <hr>
 
 <h2> Conclusion</h2>
