@@ -56,6 +56,15 @@ Row 3: shift left by 3 bytes
 The <code>MixColumns</code> operation performs matrix multiplication in 
 Galois Field arithmetic to mix the bytes within each column.
   <img src="./docs/GF_MixCol_Single.png" width="300" />
+  For a single coloumn, the equations are as follows:
+  b0 = (02 · a0) ⊕ (03 · a1) ⊕ a2 ⊕ a3
+b1 = a0 ⊕ (02 · a1) ⊕ (03 · a2) ⊕ a3
+b2 = a0 ⊕ a1 ⊕ (02 · a2) ⊕ (03 · a3)
+b3 = (03 · a0) ⊕ a1 ⊕ a2 ⊕ (02 · a3)
+  For it to affect the entire Matrix values, we do it to all four coloumns.
+
+  <h3>GF multiplier</h3>
+  
 </p>
 
 <h3>5️ Key Expansion</h3>
