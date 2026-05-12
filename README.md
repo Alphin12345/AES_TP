@@ -69,11 +69,11 @@ Galois Field arithmetic to mix the bytes within each column.
 The <code>Key Expansion</code> module generates multiple round keys from the original cipher key.
 These keys are used in different AES rounds during encryption and decryption.
 </p>
-<p>Leaf cells has been uploaded as <b>LC</b> in docs</p>
 
 <h2>Block Diagram</h2>
-
-
+ <img src="./docs/Block Diagram.png" width="800" />
+<p style="color:red;"><b>IMPORTANT NOTE:</b></p>
+<p>Leaf cells has been uploaded as <b>LC</b> in docs</p>
 <hr>
 
 <h2> Inverse Operations</h2>
