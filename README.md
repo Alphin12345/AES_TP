@@ -55,7 +55,7 @@ Row 3: shift left by 3 bytes
 <p>
 The <code>MixColumns</code> operation performs matrix multiplication in 
 Galois Field arithmetic to mix the bytes within each column.
-  <img src=""C:\Users\ASUS\OneDrive\Pictures\Screenshots\Screenshot 2026-05-12 103443.png"" width="300" />
+  <img src="./docs/GF_MixCol_Single.png" width="300" />
 </p>
 
 <h3>5️ Key Expansion</h3>
