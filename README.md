@@ -77,9 +77,7 @@ The formula is: state(out)= state(in)^roundkey
 Formula for key expansion:
 Rotword([b0, B1, B2, B3]) = [B1, B2, B3, B0]
 Temp = rotword(w3) ^ rcon[round]
-<img width="2425" height="616" alt="image" src="https://github.com/user-attachments/assets/b5fff046-bb46-435b-887e-0e35942ed2a7" />
 
-<img width="2827" height="572" alt="image" src="https://github.com/user-attachments/assets/4466721a-c9d7-400a-8675-674584655977" />
 
 </p>
 
