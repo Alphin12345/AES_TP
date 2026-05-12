@@ -62,6 +62,10 @@ Galois Field arithmetic to mix the bytes within each column.
 <p>b2 = a0 ⊕ a1 ⊕ (02 · a2) ⊕ (03 · a3)</p>
 <p>b3 = (03 · a0) ⊕ a1 ⊕ a2 ⊕ (02 · a3)</p>
 <p>which is also the <b>GF Multiplier</b></p>
+<p>GF multiplier by 2</p>
+<img src="./docs/GF mult 2.png" width="300" /></p>
+<p>GF multiplier by 3</p>
+<img src="./docs/GF mult 3.png" width="300" /></p>
   For it to affect the entire Matrix values, we do it to all four coloumns.
   </p>
 
