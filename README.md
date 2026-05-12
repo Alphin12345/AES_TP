@@ -29,6 +29,7 @@ The plaintext is converted into a <b>4×4 byte matrix</b> called the
 The <code>SubBytes</code> transformation replaces each byte in the state matrix 
 using the AES S-Box to provide non-linearity and improve security.
   The S-box is a fixed LUT which has 256 different possible values through Finite Field of 256 elements(Galois Field GF(2^8))
+  The matrix is 16x16 Matrix having 256 different values. The state matrix containing 4x4 matrix replaces each value according to its fixed value, each value containing 8 bits.  
   <h3>How the S-Box is generated:</h3>
   The polynomial ( m(x) = x^8 + x^4 + x^3 + x + 1 ) (hex: `0x11B`) is used to define the finite field **GF(2⁸)** in which all AES byte operations take place. In the context of the S-Box, it is specifically used when computing the **multiplicative inverse of each byte**. Since AES treats each byte as a polynomial over GF(2⁸), any multiplication that results in a degree higher than 7 is reduced using this irreducible polynomial. This ensures that all results stay within 8 bits (0x00–0xFF) and remain valid elements of the field.
 
