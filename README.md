@@ -68,6 +68,19 @@ Galois Field arithmetic to mix the bytes within each column.
 <p>
 The <code>Key Expansion</code> module generates multiple round keys from the original cipher key.
 These keys are used in different AES rounds during encryption and decryption.
+In the beginning a master key is exored with the plain text, then the scrambled text is produced. All in 128 bits for round 0. 
+Then for all the remaining rounds, round key is derived from the master key. 
+In round 1-9 there is subybtes, shift rows, mix columns, add round key.
+ In round 1-9, each round produces a round key that is exored with the curreent state.
+ Then in round 10 again there is all this except mix columns. The output of the last exor is my cipher text. 
+The formula is: state(out)= state(in)^roundkey
+Formula for key expansion:
+Rotword([b0, B1, B2, B3]) = [B1, B2, B3, B0]
+Temp = rotword(w3) ^ rcon[round]
+<img width="2425" height="616" alt="image" src="https://github.com/user-attachments/assets/b5fff046-bb46-435b-887e-0e35942ed2a7" />
+
+<img width="2827" height="572" alt="image" src="https://github.com/user-attachments/assets/4466721a-c9d7-400a-8675-674584655977" />
+
 </p>
 
 <h2>Block Diagram</h2>
