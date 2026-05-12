@@ -111,7 +111,17 @@ Reverses the <code>MixColumns</code> transformation using inverse matrix multipl
 <p>
   Take one 4-byte column from the state matrix as a0, a1, a2, a3.
 Multiply this column with the inverse fixed matrix:
-   <img src="./docs/Block Diagram.png" width="800" />
+   <img src="./docs/Inverse MixColoumn.png" width="800" />
+</p>
+<p>
+  Calculate output bytes:
+  </p>
+<p>b0 = (0E × a0) ⊕ (0B × a1) ⊕ (0D × a2) ⊕ (09 × a3)</p>
+<p>b1 = (09 × a0) ⊕ (0E × a1) ⊕ (0B × a2) ⊕ (0D × a3)</p>
+<p>b2 = (0D × a0) ⊕ (09 × a1) ⊕ (0E × a2) ⊕ (0B × a3)</p>
+<p>b3 = (0B × a0) ⊕ (0D × a1) ⊕ (09 × a2) ⊕ (0E × a3)</p>
+<p>All multiplication is done in GF(2⁸).</p>
+<p>The resulting b0, b1, b2, b3 become the recovered original column during decryption.
 </p>
 <hr>
 
