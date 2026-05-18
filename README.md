@@ -96,12 +96,12 @@ Temp = rotword(w3) ^ rcon[round]
 
 <h3>1️ InvSubBytes</h3>
 <p>
-Reverses the <code>SubBytes</code> transformation using the inverse S-Box.
+<b>InverseSubBytes</b> is the decryption stage of AES (Advanced Encryption Standard) where each byte in the state matrix is replaced using the inverse S-box. It reverses the substitution done in the SubBytes step during encryption, helping recover the original plaintext.
 </p>
 
 <h3>2️ InvShiftRows</h3>
 <p>
-Reverses the cyclic row shifts performed during the <code>ShiftRows</code> step.
+<b>InverseShiftRows</b> is the decryption stage of AES (Advanced Encryption Standard) where the rows of the state matrix are shifted to the right by different positions. It reverses the row shifting performed during the ShiftRows step in encryption.
 </p>
 
 <h3>3️ InvMixColumns</h3>
