@@ -153,9 +153,9 @@ endfunction
 
 always @(*) begin
     case (sel)
-        2'b00: out = a;        // ×1
-        2'b01: out = mul2(a);  // ×2
-        2'b10: out = mul3(a);  // ×3
+        2'b00: out = a;        // Ã—1
+        2'b01: out = mul2(a);  // Ã—2
+        2'b10: out = mul3(a);  // Ã—3
         default: out = 8'h00;
     endcase
 end
