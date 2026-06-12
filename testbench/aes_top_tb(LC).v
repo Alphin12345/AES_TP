@@ -22,25 +22,25 @@ initial begin
 
     // Test 1
     data_in = 8'h00;
-    gf_sel  = 2'b00;   // ×1
+    gf_sel  = 2'b00;   // Ã—1
     key_in  = 8'h00;
     #10;
 
     // Test 2
     data_in = 8'h01;
-    gf_sel  = 2'b01;   // ×2
+    gf_sel  = 2'b01;   // Ã—2
     key_in  = 8'hFF;
     #10;
 
     // Test 3
     data_in = 8'h53;
-    gf_sel  = 2'b10;   // ×3
+    gf_sel  = 2'b10;   // Ã—3
     key_in  = 8'hAA;
     #10;
 
     // Test 4
     data_in = 8'hFF;
-    gf_sel  = 2'b01;   // ×2
+    gf_sel  = 2'b01;   // Ã—2
     key_in  = 8'h55;
     #10;
 
